@@ -1,0 +1,16 @@
+.loader {
+    height: 300px;
+    width: 300px;
+    border-radius: 50%;
+    border: 15px solid black;
+    border-top-color: white;
+    animation: rotate 5s infinite;
+    margin: auto;
+
+}
+
+@keyframes rotate {
+    100% {
+        rotate: 360deg;
+    }
+}
