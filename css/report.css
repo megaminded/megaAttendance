@@ -1,5 +1,6 @@
 @import url('config.css');
 @import url('navbar.css');
+@import url('footer.css');
 
 .container {
     width: 90%;

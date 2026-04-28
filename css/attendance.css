@@ -1,5 +1,6 @@
 @import url('config.css');
 @import url('navbar.css');
+@import url('footer.css');
 
 .container {
   width: 90%;
@@ -142,7 +143,7 @@ td {
   font-size: 14px;
 }
 
-td:hover{
+td:hover {
   background-color: rgba(211, 210, 210, 0.705);
 
 }
