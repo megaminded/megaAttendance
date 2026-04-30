@@ -110,22 +110,24 @@
 }
 
 .contact {
-  background: white;
   border-radius: 12px;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
 
 .info-box {
-  display: flex;
-  align-items: center;
   background: #f7f7f7;
   border-radius: 10px;
 }
 
-.label {
-  font-size: 12px;
-  color: gray;
+.info-box>p:nth-of-type(1) {
+  font-size: 24px;
+  color: var(--primary-color);
 }
+
+.info-box ul li span:nth-of-type(1) {
+  color: grey;
+}
+
 
 .footer-d {
   display: flex;
