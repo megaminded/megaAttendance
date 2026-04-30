@@ -20,6 +20,14 @@ body {
   flex-direction: column;
   align-items: center;
 }
+  .justify-center {
+        display: flex;
+        justify-content: center;
+    }
+
+    .text-align {
+        text-align: center;
+    }
 
 .hero h1 {
   color: var(--primary-color);
@@ -35,13 +43,13 @@ body {
 
 
 .buttons {
-  margin-top: 20px;
+  /* margin-top: 20px; */
 }
 
 .btn {
   display: inline-block;
   text-decoration: none;
-  padding: 12px 18px;
+   padding: 12px 18px;
   margin: 5px;
   border-radius: 6px;
   font-size: 14px;
@@ -67,18 +75,21 @@ body {
 
 .features {
   width: 85%;
-  margin: 20px auto;
   display: flex;
   gap: 15px;
 }
 
-.feature-box {
+/* .feature-box {
   background: white;
   width: 33.3%;
   padding: 20px;
   border-radius: 10px;
   border: 3px solid var(--secondary-color);
   text-align: center;
+} */
+
+.feature-box{
+  height: 230px;
 }
 
 .feature-box:hover {
