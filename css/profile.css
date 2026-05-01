@@ -11,122 +11,74 @@
 
 
 .container {
-  background-color: white;
+  background-color: whitesmoke
 }
 
-.header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+.row:nth-of-type(1) .col-2:nth-of-type(1)>p:nth-of-type(1) {
+  font-size: 25px;
+  text-transform: capitalize;
 }
 
-.header h2 {
-  color: var(--primary-color);
+.row:nth-of-type(1) .col-2:nth-of-type(1)>p:nth-of-type(2) {
+  font-size: 13px;
+  color: grey
 }
 
-.header p {
-  font-size: 12px;
-  color: var(--primary-color);
-}
-
-.edit-btn {
-  background: var(--primary-color);
+.div2 a {
+  background-color: var(--primary-color);
+  border-radius: 12px;
   color: white;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
   text-decoration: none;
 }
 
-.edit-btn i {
-  color: white;
-  font-size: 14px;
+.div2 i {
+  color: white
 }
 
-.profile-box {
-  background: white;
+.row:nth-of-type(2) .col-2:nth-of-type(1) img {
+  width: 80%;
   border-radius: 12px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
 
-.cover {
-  height: 100px;
-  background-color: var(--primary-color);
-}
-
-.profile-info {
-  position: relative;
-  height: 100px;
-}
-
-.profile-pic {
-  position: absolute;
-  top: -90px;
-  font-size: 24px;
-  border-radius: 2px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.profile-pic img {
-  width: 130px;
-  border-radius: 20%;
-}
-
-.profile-div {
-  position: absolute;
-  height: 150px;
-  left: 200px;
-  top: -80px;
-  line-height: 80px;
-  background-color: transparent;
-}
-
-.profile-div h3 {
+.m-name {
   font-size: 30px;
   color: white
 }
 
-.profile-div p {
-  font-size: 20px;
+.row:nth-of-type(3) .col-2 p {
   color: var(--primary-color)
 }
 
-
-.matric_number {
-  font-size: 13px;
-  color: var(--secondary-color);
+.row:nth-of-type(2) {
+  height: 100px
 }
 
-.status {
-  position: absolute;
-  right: 15px;
-  top: 15px;
-  background: #eee;
-  color: var(--primary-color);
-  border-radius: 20px;
-  font-size: 12px;
+.bg-pri {
+  background-color: var(--primary-color);
 }
 
-.contact {
-  border-radius: 12px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+.row:nth-of-type(3) {
+  background-color: white;
+  height: 100px
 }
 
-.info-box {
-  background: #f7f7f7;
-  border-radius: 10px;
+
+.wrapper .row:nth-of-type(1) .col-6 p {
+  font-size: 30px;
 }
 
-.info-box>p:nth-of-type(1) {
-  font-size: 24px;
-  color: var(--primary-color);
+.wrapper .row .col-12 {
+  background-color: white;
 }
 
-.info-box ul li span:nth-of-type(1) {
-  color: grey;
+.wrapper .row .col-12 p:nth-of-type(1) {
+  color: grey
 }
+
+.wrapper .row .col-12 p:nth-of-type(2) {
+  color: var(--primary-color)
+}
+
 
 
 .footer-d {

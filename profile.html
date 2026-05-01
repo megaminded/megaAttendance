@@ -13,7 +13,7 @@
 
 <body>
 
-  <nav class="navbar">
+  <nav class="navbar py-3 px-5">
 
     <div class="logo">
       <img src="/images/logo-dark.png" alt="" />
@@ -23,67 +23,86 @@
       <a href="index.html">Home</a>
       <a href="students_list.html">Students-List</a>
       <a href="profile.html">Profile</a>
-      <a href="edit_profile.html">Edit Profile</a>
+      <a href="instructions.html">Instructions</a>
       <a href="about.html">About</a>
     </div>
 
     <div class="auth-buttons">
-      <a href="login.html" class="login"><i class="fa fa-user-circle" aria-hidden="true"></i> Login</a>
-      <a href="register.html" class="register"><i class="fa fa-user-plus" aria-hidden="true"></i> Register</a>
+      <a href="login.html" class="login px-3 py-2 me-3">
+        <i class="fa fa-user-circle"></i> Login
+      </a>
+      <a href="register.html" class="register px-3 py-2">
+        <i class="fa fa-user-plus"></i> Register
+      </a>
     </div>
+
   </nav>
-  <div class="container pt-2">
-    <div class="header mb-2">
-      <div>
-        <h2>My Profile</h2>
-        <p>Your personal information</p>
+  <div class="container pt-2 mt-2 pb-2 ps-3">
+    <div class="row">
+      <div class="col-2 col-md-1 div1 col-lg-2">
+        <p>My Profile</p>
+        <p>Your Personal information</p>
       </div>
-      <a href="edit-page.html" class="edit-btn py-2 px-3"><i class="fas fa-user-edit m-2"></i> Edit Profile</a>
+      <div class=" col-8 offset-1 col-sm-5 offset-sm-3 offset-md-4 col-md-3 col-lg-3 offset-lg-7  mt-4 div2 ">
+        <a href="./edit_profile.html" class="py-3 px-3 ms-5"><i class="fa-solid fa-user-pen  me-3"></i>Edit
+          Profile</a>
+      </div>
     </div>
-
-    <div class="profile-box mb-2">
-
-      <div class="cover"></div>
-
-      <div class="profile-info p-3">
-        <div class="profile-pic"><img src="images/profile-pic.jpeg" alt=""></div>
-
-        <div class="profile-div">
-          <h3>Matthew Micheal</h3>
-          <p class="matric_number mt-4">CMP2306543</p>
+    <div class="row pt-2 bg-pri ">
+      <div class="col-2"> <img src="./images/profile-pic.jpeg" /> </div>
+      <div class="col-8 col-sm-6 col-md-5 col-lg-4 ">
+        <p class="mt-3 m-name">Matthew Micheal</p>
+      </div>
+    </div>
+    <div class="row mb-3">
+      <div class="col-2 offset-2">
+        <p>CMP2306453</p>
+        <p>Student</p>
+      </div>
+    </div>
+  </div>
+  <div class="container mb-2">
+    <div class="wrapper pb-2 pe-1">
+      <div class="row ps-2 ms-2">
+        <div class="col-6 ">
+          <p>Student Information</p>
         </div>
-
-        <span class="status px-2 py-2">Student</span>
+      </div>
+      <div class="row mb-2 ms-3">
+        <div class="col-12  pt-2">
+          <p>Email</p>
+          <p>matthew05@gmail.com</p>
+        </div>
+      </div>
+      <div class="row mb-2 ms-3">
+        <div class="col-12  pt-2 ">
+          <p>Matric Number</p>
+          <p>CMP2306543</p>
+        </div>
+      </div>
+      <div class="row mb-2 ms-3">
+        <div class="col-12  pt-2 ">
+          <p>Faculty</p>
+          <p>Computing</p>
+        </div>
+      </div>
+      <div class="row mb-2 ms-3">
+        <div class="col-12  pt-2 ">
+          <p>Department</p>
+          <p>Computer Science</p>
+        </div>
+      </div>
+      <div class="row mb-2 ms-3">
+        <div class="col-12  pt-2">
+          <p>PLace of IT</p>
+          <p>Alihame</p>
+        </div>
       </div>
     </div>
 
-    <div class="contact p-3 mb-2">
-      <div class="info-box p-2 d-flex flex-column">
-        <p class="ms-1">Student Information</p>
-        <ul class="list-group">
-          <li class="list-group-item d-flex flex-column mb-2">
-            <span class="mb-1">Email</span>
-            <span>matthew05@gmail.com</span>
-          </li>
-          <li class="list-group-item d-flex flex-column mb-2">
-            <span class="mb-1">Matric Number</span>
-            <span>CMP2306543</span>
-          </li>
-          <li class="list-group-item d-flex flex-column mb-2">
-            <span class="mb-1">Faculty</span>
-            <span>Computing</span>
-          </li>
-          <li class="list-group-item d-flex flex-column mb-2">
-            <span class="mb-1">Department</span>
-            <span>Compter Science</span>
-          </li>
-          <li class="list-group-item d-flex flex-column mb-2">
-            <span class="mb-1">Place Of IT</span>
-            <span>Alihame</span>
-          </li>
-        </ul>
-      </div>
-    </div>
+
+  </div>
+  </div>
 
 
   </div>
