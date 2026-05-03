@@ -1,5 +1,4 @@
 @import url('/css/config.css');
-@import url('/css/navbar.css');
 
 * {
     margin: 0;
@@ -13,10 +12,6 @@ body {
     color: var(--secondary-color);
 }
 
-.container {
-    width: 100%;
-}
-
 h1 {
     color: var(--primary-color);
     text-align: center;
@@ -26,65 +21,22 @@ h2 {
     color: var(--primary-color);
 }
 
-.features {
-    display: flex;
-    gap: 1.25rem;
-    flex-wrap: wrap;
-    /* ADDED TO ALLOW WRAPPING ON SMALLER SCREENS */
-}
-
-.feature-card {
-    border-left: 0.3125rem solid var(--primary-color);
-}
-
 .footer-d {
-    display: flex;
     background-color: var(--primary-color);
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-evenly;
+    color: white;
 }
 
 .img-f {
     height: 80px;
 }
 
-.footer-d1 {
-    display: flex;
-    justify-content: space-between;
-    height: 30px;
-}
-
-.footer-d1 a {
+.footer-d a {
     color: white;
-}
-
-.footer-d2 {
-    height: 30px;
-    color: white;
-}
-
-.footer-d2 span {
-    color: blue;
-}
-
-.footer-last {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 600px;
-}
-
-.footer-space {
-    width: 200px;
-    height: 100px;
-    color: white;
+    text-decoration: none;
 }
 
 .why-section {
     max-width: 1000px;
-
 }
 
 .why-subtitle {
@@ -92,37 +44,6 @@ h2 {
     max-width: 600px;
     font-size: 15px;
     line-height: 1.6;
-}
-
-.why-row {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 3rem;
-
-    background: #fafafa;
-    border-radius: 12px;
-}
-
-.why-row.reversed {
-    flex-direction: row-reverse;
-}
-
-.why-image-box {
-    max-width: 360px;
-    width: 360px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-shrink: 0;
-    overflow: hidden;
-    background-color: red;
-}
-
-.why-image-box img {
-    width: 100%;
-    height: auto;
-    border-radius: 10px;
 }
 
 .placeholder-label {
@@ -134,30 +55,44 @@ h2 {
     text-transform: uppercase;
 }
 
-.team {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1.25rem;
+.why-section img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
 }
 
-.team-card {
-    background: #fff;
-    border-radius: 0.625rem;
-    width: 220px;
-    box-shadow: 0 0.125rem 0.5rem rgba(0, 0, 0, 0.1);
-    border-left: 0.3125rem solid var(--primary-color);
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
+.nav-logo {
+    height: 40px;
+    width: auto;
+    max-width: 100%;
 }
 
-.team-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.15);
+.login,
+.register {
+    background-color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 14px;
+    color: black;
+    padding: 8px 12px;
 }
 
-.team-card h3 {
-    color: var(--primary-color);
+.navbar {
+    background-color: var(--primary-color);
+    box-shadow: 2px 2px 2px var(--primary-color);
 }
 
-.team-card p {
-    font-size: 0.9rem;
+.navbar-nav .nav-link {
+    text-decoration: none;
+    color: white;
+    font-size: 15px;
+}
+
+.navbar-brand img {
+    height: 40px;
+    width: auto;
+}
+
+.navbar-toggler {
+    border: none;
 }

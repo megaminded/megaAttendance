@@ -3,6 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
+    <title>About | MegaAttendance</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- SEO Meta Tags -->
@@ -13,9 +14,7 @@
         content="SIWES, Attendance System, Student Project, Attendance Management, Nigeria, Software Engineering">
 
     <meta name="author" content="SIWES Student Development Team">
-
     <meta name="robots" content="index, follow">
-
     <!-- Open Graph (for social media sharing) -->
     <meta property="og:title" content="About | SIWES Attendance Management System">
     <meta property="og:description"
@@ -23,19 +22,18 @@
     <meta property="og:type" content="website">
     <meta property="og:url" content="http://localhost:5500/about.html">
     <meta property="og:image" content="/images/preview.png">
-    <link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="/css/about.css">
+    <link rel="stylesheet" href="/bootstrap/bootstrap.css">
     <link rel="stylesheet" href="/css/navbar.css">
+    <link rel="stylesheet" href="/css/about.css">
     <link rel="stylesheet" href="/fontawesome/css/all.css">
 </head>
 
 <body>
-
-    <div class="container">
-        <nav class="navbar">
+    <div class="container-fluid px-0">
+        <nav class="navbar py-3 px-5">
 
             <div class="logo">
-                <img src="/images/logo-dark.png" alt="" />
+                <img src="/images/logo-dark.png" alt="MegaAttendance Logo" />
             </div>
 
             <div class="nav-links">
@@ -47,12 +45,15 @@
             </div>
 
             <div class="auth-buttons">
-                <a href="login.html" class="login"><i class="fa fa-user-circle" aria-hidden="true"></i> Login</a>
-                <a href="register.html" class="register"><i class="fa fa-user-plus" aria-hidden="true"></i> Register</a>
+                <a href="login.html" class="login px-3 py-2 me-3">
+                    <i class="fa fa-user-circle"></i> Login
+                </a>
+                <a href="register.html" class="register px-3 py-2">
+                    <i class="fa fa-user-plus"></i> Register
+                </a>
             </div>
 
         </nav>
-
         <h1 class="mb-4 ps-4">About Our Attendance System</h1>
         <p class="mb-3 ps-4">Welcome to our Attendance Management System. We aim to streamline the way organizations
             track attendance.</p>
@@ -61,162 +62,218 @@
         <p class="mb-3 ps-4">To provide a robust, automated solution that eliminates the complexities of manual
             attendance tracking.</p>
 
-        <div class="features mt-4 ps-4">
-            <div class="feature-card p-3">
-                <h3>Automated Tracking</h3>
-                <p>Real-time updates for accurate records.</p>
-            </div>
 
-            <div class="feature-card p-3">
-                <h3>Detailed Reporting</h3>
-                <p>Comprehensive insights with one click.</p>
-            </div>
+        <div class="mt-4">
+            <div class="row g-4">
 
-            <div class="feature-card p-3">
-                <h3>Secure Access</h3>
-                <p>Encrypted data storage for privacy.</p>
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card shadow-sm h-100 border-start border-4">
+                        <div class="card-body">
+                            <h5 class="card-title">Automated Tracking</h5>
+                            <p class="card-text">Real-time updates for accurate records.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card shadow-sm h-100 border-start border-4">
+                        <div class="card-body">
+                            <h5 class="card-title">Detailed Reporting</h5>
+                            <p class="card-text">Comprehensive insights with one click.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card shadow-sm h-100 border-start border-4">
+                        <div class="card-body">
+                            <h5 class="card-title">Secure Access</h5>
+                            <p class="card-text">Encrypted data storage for privacy.</p>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </div>
-
         <!--  NEW TEAM SECTION -->
         <h2 class="mt-4 ps-4">Development Team</h2>
         <p class="mb-3 ps-4">This system was collaboratively designed and developed by students across multiple
             departments</p>
 
-        <div class="team mt-4">
-            <div class="team-card p-3">
-                <h3>Otiti Chigoziem P.</h3>
-                <p>Software Engineering</p>
+        <div class="row g-4 mt-4">
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                <div class="card shadow-sm h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">Otiti Chigoziem P.</h5>
+                        <p class="card-text">Software Engineering</p>
+                    </div>
+                </div>
             </div>
 
-            <div class="team-card p-3">
-                <h3>Anthony Ruth C.</h3>
-                <p>Software Engineering</p>
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                <div class="card shadow-sm h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">Anthony Ruth C.</h5>
+                        <p class="card-text">Software Engineering</p>
+                    </div>
+                </div>
             </div>
 
-            <div class="team-card p-3">
-                <h3>Ehiedu Goodluck</h3>
-                <p>Cyber Security</p>
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                <div class="card shadow-sm h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">Ehiedu Goodluck</h5>
+                        <p class="card-text">Cyber Security</p>
+                    </div>
+                </div>
             </div>
 
-            <div class="team-card p-3">
-                <h3>Iyedoh Unity</h3>
-                <p>Software Engineering</p>
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                <div class="card shadow-sm h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">Iyedoh Unity</h5>
+                        <p class="card-text">Software Engineering</p>
+                    </div>
+                </div>
             </div>
 
-            <div class="team-card p-3">
-                <h3>Okonta Miracle</h3>
-                <p>Software Engineering</p>
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                <div class="card shadow-sm h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">Okonta Miracle</h5>
+                        <p class="card-text">Software Engineering</p>
+                    </div>
+                </div>
             </div>
 
-            <div class="team-card p-3">
-                <h3>Boi Mercy</h3>
-                <p>Software Engineering</p>
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                <div class="card shadow-sm h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">Boi Mercy</h5>
+                        <p class="card-text">Software Engineering</p>
+                    </div>
+                </div>
             </div>
 
-            <div class="team-card p-3">
-                <h3>Igbodi Miracle</h3>
-                <p>Software Engineering</p>
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                <div class="card shadow-sm h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">Igbodi Miracle</h5>
+                        <p class="card-text">Software Engineering</p>
+                    </div>
+                </div>
             </div>
-            <div class="team-card p-3">
-                <h3>Audu Treasure</h3>
-                <p>Software Engineering</p>
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                <div class="card shadow-sm h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">Audu Treasure</h5>
+                        <p class="card-text">Software Engineering</p>
+                    </div>
+                </div>
             </div>
+
         </div>
 
         <p class="mb-3 ps-4"><em>...and others (et al.) who contributed to the success of this project.</em></p>
+        <div class="why-section py-4 mx-auto">
+            <h1>Why MegaAttendance?</h1>
+            <p class="why-subtitle mb-5 mx-auto">
+                Paper attendance is outdated, error-prone, and inefficient. Here's why going digital with MegaAttendance
+                is
+                the smarter choice.
+            </p>
+
+            <div class="row align-items-center g-4 bg-light rounded shadow-sm mb-5 p-4">
+                <div class="col-12 col-md-4">
+                    <img src="/images/realtime_accuracy.png" alt="Real-Time Accuracy Illustration" />
+                </div>
+                <div class="col-12 col-md-8">
+                    <h2>Real-Time Accuracy</h2>
+                    <ul>
+                        <li>Eliminates human error from manual roll calls and paper sign-ins</li>
+                        <li>Attendance is recorded instantly — no lost sheets or illegible handwriting</li>
+                        <li>Automatic timestamps ensure every record is precise and verifiable</li>
+                        <li>Reduces the chance of proxy attendance and buddy-punching</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="row flex-row-reverse align-items-center g-4 bg-light rounded shadow-sm mb-5 p-4">
+                <div class="col-12 col-md-4">
+                    <img src="/images/instant_reporting.png" alt="Instant Reporting Illustration" />
+                </div>
+                <div class="col-12 col-md-8">
+                    <h2>Instant Access & Reporting</h2>
+                    <ul>
+                        <li>View attendance data from anywhere — no digging through filing cabinets</li>
+                        <li>Generate reports in seconds instead of manually tallying paper records</li>
+                        <li>Filter by date, class, or student to find exactly what you need</li>
+                        <li>Export data for analysis without re-entering a single number</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="row align-items-center g-4 bg-light rounded shadow-sm mb-5 p-4">
+                <div class="col-12 col-md-4">
+                    <img src="/images/secure_tamperproof.png" alt="Secure and Tamper-Proof Illustration" />
+                </div>
+                <div class="col-12 col-md-8">
+                    <h2>Secure & Tamper-Proof</h2>
+                    <ul>
+                        <li>Digital records can't be altered, torn, or conveniently "misplaced"</li>
+                        <li>Role-based access ensures only authorized users can modify data</li>
+                        <li>Full audit trail tracks every change — accountability built in</li>
+                        <li>Cloud-backed storage means your data survives spills, fires, and office moves</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="row flex-row-reverse align-items-center g-4 bg-light rounded shadow-sm mb-5 p-4">
+                <div class="col-12 col-md-4">
+                    <img src="/images/save_time_resources.png" alt="Save Time and Resources Illustration" />
+                </div>
+                <div class="col-12 col-md-8">
+                    <h2>Save Time & Resources</h2>
+                    <ul>
+                        <li>No more printing, distributing, and collecting paper attendance sheets</li>
+                        <li>Lecturers spend less time on admin and more time teaching</li>
+                        <li>Automated notifications alert students and staff about attendance status</li>
+                        <li>Go paperless — better for your budget and the environment</li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
 
     </div>
 
-    <div class="why-section py-4 mx-auto">
-        <h1>Why MegaAttendance?</h1>
-        <p class="why-subtitle mb-5 mx-auto">
-            Paper attendance is outdated, error-prone, and inefficient. Here's why going digital with MegaAttendance is
-            the smarter choice.
-        </p>
+    <footer class="footer-d container-fluid py-4">
+        <div class="row align-items-center text-center text-md-start">
 
-        <div class="why-row mb-5 p-4">
-            <div class="why-image-box">
-                <img src="/images/realtime_accuracy.png" alt="Real-Time Accuracy Illustration" />
+            <div class="col-12 col-md-3 mb-3 mb-md-0">
+                <img src="./images/logo-dark.png" class="img-f" />
             </div>
-            <div class="why-text">
-                <h2>Real-Time Accuracy</h2>
-                <ul>
-                    <li>Eliminates human error from manual roll calls and paper sign-ins</li>
-                    <li>Attendance is recorded instantly — no lost sheets or illegible handwriting</li>
-                    <li>Automatic timestamps ensure every record is precise and verifiable</li>
-                    <li>Reduces the chance of proxy attendance and buddy-punching</li>
-                </ul>
+
+            <div class="col-12 col-md-6 mb-3 mb-md-0">
+                <div class="d-flex flex-wrap justify-content-center gap-3 mb-2">
+                    <a href="index.html">Home</a>
+                    <a href="students_list.html">Students-List</a>
+                    <a href="profile.html">Profile</a>
+                    <a href="edit_profile.html">Edit Profile</a>
+                    <a href="about.html">About</a>
+                </div>
+
+                <p>© <span>MegaAttendance</span> Copyright 2026. All Rights Reserved.</p>
             </div>
+
+            <div class="col-12 col-md-3">
+                <p>Contact us</p>
+                <p>Phone: 08124353021</p>
+            </div>
+
         </div>
-
-        <div class="why-row reversed mb-5 p-4">
-            <div class="why-image-box">
-                <img src="/images/instant_reporting.png" alt="Instant Reporting Illustration" />
-            </div>
-            <div class="why-text">
-                <h2>Instant Access & Reporting</h2>
-                <ul>
-                    <li>View attendance data from anywhere — no digging through filing cabinets</li>
-                    <li>Generate reports in seconds instead of manually tallying paper records</li>
-                    <li>Filter by date, class, or student to find exactly what you need</li>
-                    <li>Export data for analysis without re-entering a single number</li>
-                </ul>
-            </div>
-        </div>
-
-        <div class="why-row mb-5 p-4">
-            <div class="why-image-box">
-                <img src="/images/secure_tamperproof.png" alt="Secure and Tamper-Proof Illustration" />
-            </div>
-            <div class="why-text">
-                <h2>Secure & Tamper-Proof</h2>
-                <ul>
-                    <li>Digital records can't be altered, torn, or conveniently "misplaced"</li>
-                    <li>Role-based access ensures only authorized users can modify data</li>
-                    <li>Full audit trail tracks every change — accountability built in</li>
-                    <li>Cloud-backed storage means your data survives spills, fires, and office moves</li>
-                </ul>
-            </div>
-        </div>
-
-        <div class="why-row reversed mb-5 p-4">
-            <div class="why-image-box">
-                <img src="/images/save_time_resources.png" alt="Save Time and Resources Illustration" />
-            </div>
-            <div class="why-text">
-                <h2>Save Time & Resources</h2>
-                <ul>
-                    <li>No more printing, distributing, and collecting paper attendance sheets</li>
-                    <li>Lecturers spend less time on admin and more time teaching</li>
-                    <li>Automated notifications alert students and staff about attendance status</li>
-                    <li>Go paperless — better for your budget and the environment</li>
-                </ul>
-            </div>
-        </div>
-
-    </div>
-
-    <div class="footer-d p-4">
-        <div><img src="./images/logo-dark.png" class="img-f" /></div>
-        <div class="footer-last">
-            <div class="footer-d1">
-                <a href="index.html">Home</a>
-                <a href="students_list.html">Students-List</a>
-                <a href="profile.html">Profile</a>
-                <a href="edit_profile.html">Edit Profile</a>
-                <a href="about.html">About</a>
-            </div>
-            <div class="footer-d2">
-                <p>© <span>MegaAttendance</span>Copyright 2026. All Rights Reserved.</p>
-            </div>
-        </div>
-        <div class="footer-space">
-            <p>Contact us</p>
-            <p>Phone: 08124353021</p>
-        </div>
-    </div>
-
+    </footer>
+    <script src="/bootstrap/bootstrap.bundle.js"></script>
 </body>
 
 </html>
