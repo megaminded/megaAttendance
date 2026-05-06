@@ -7,59 +7,107 @@
   font-family: "Open Sans", "Helvetica Neue", sans-serif;
 }
 
-.main {
-  background-color: white;
 .bg-purple {
   background-color: var(--primary-color);
 }
 
 .inner-div {
-  max-width: 500px;
+  width: 41vw;
+  height: 100vh;
   background-color: var(--primary-color);
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 6px;
 }
 
-.header-h1 {
-  color: white;
-  font-size: 18px;
-  font-weight: 600;
-}
-
-.header img {
-  width: 80px;
+.header {
+  width: 100%;
+  height: 8%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
 }
 
 .back-btn {
   color: white;
-  font-size: 20px;
+  font-size: 24px;
   text-decoration: none;
-  transition: 0.2s;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .back-btn:hover {
   transform: scale(1.1);
 }
 
-.form-floating>label {
-  color: #666;
+.header-h1 {
+  color: white;
+  font-size: 20px;
+  font-weight: 600;
+  flex: 1;
 }
 
-.form-control,
-.form-select {
-  border-radius: 6px;
+.header img {
+  width: 150px;
+  object-fit: contain;
+}
+
+.info {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.info label {
+  color: white;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.info-input {
+  border: 1px solid grey;
+  font-size: 14px;
+  background-color: white;
+  color: #333;
+}
+
+.info-select {
+  border: 1px solid grey;
+  font-size: 14px;
+  background-color: white;
+  color: #333;
+  cursor: pointer;
+}
+
+.info input::placeholder {
+  color: #999;
+}
+
+.registration-form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  overflow-y: auto;
 }
 
 .submit-btn {
   background-color: var(--secondary-color);
   color: white;
-  border-radius: 25px;
+  border: none;
+  border-radius: 20px;
+  font-size: 16px;
   font-weight: 600;
-}
-
-.submit-btn a {
-  text-decoration: none;
-  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
 .submit-btn:hover {
-  background-color: rgba(255, 255, 255, 0.2);
+  background-color: rgba(255, 255, 255, 0.1);
 }
