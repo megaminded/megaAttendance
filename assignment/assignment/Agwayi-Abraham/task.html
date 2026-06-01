@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Board</title>
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body{
+    height:100vh;
+    background:linear-gradient(135deg,#0f172a,#1e1b4b);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.main-box{
+    width:360px;
+    background:#111827;
+    border-radius:20px;
+    padding:20px;
+    box-shadow:0 0 25px rgba(59,130,246,0.4);
+}
+
+.main-box h1{
+    text-align:center;
+    margin-bottom:20px;
+    color:#60a5fa;
+    font-size:28px;
+}
+
+.top-section{
+    display:flex;
+    gap:10px;
+    margin-bottom:20px;
+}
+
+.top-section input{
+    flex:1;
+    padding:12px;
+    border:2px solid #3b82f6;
+    background:#1f2937;
+    color:white;
+    border-radius:10px;
+    outline:none;
+    font-size:15px;
+}
+
+.top-section input::placeholder{
+    color:#9ca3af;
+}
+
+.top-section button{
+    padding:12px 18px;
+    border:none;
+    border-radius:10px;
+    background:#3b82f6;
+    color:white;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.top-section button:hover{
+    background:#2563eb;
+    transform:scale(1.05);
+}
+
+.task-area{
+    max-height:300px;
+    overflow-y:auto;
+}
+
+.task-card{
+    background:#1f2937;
+    border-left:5px solid #60a5fa;
+    padding:12px;
+    margin-bottom:15px;
+    border-radius:10px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    animation:slideIn .4s ease;
+}
+
+.task-card span{
+    color:white;
+    font-size:15px;
+}
+
+.delete-task{
+    background:#ef4444;
+    color:white;
+    border:none;
+    padding:7px 10px;
+    border-radius:7px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.delete-task:hover{
+    background:#dc2626;
+    transform:scale(1.05);
+}
+
+@keyframes slideIn{
+    from{
+        opacity:0;
+        transform:translateY(-10px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+.task-area::-webkit-scrollbar{
+    width:6px;
+}
+
+.task-area::-webkit-scrollbar-thumb{
+    background:#3b82f6;
+    border-radius:10px;
+}
+</style>
+</head>
+
+<body>
+
+    <div class="main-box">
+
+        <h1>Task Board</h1>
+
+        <div class="top-section">
+            <input type="text" id="userInput" placeholder="Enter your task">
+            <button id="taskBtn">Add</button>
+        </div>
+
+        <div class="task-area" id="taskContainer"></div>
+
+    </div>
+
+
+    <script>
+
+        const taskButton = document.getElementById("taskBtn");
+        const taskInput = document.getElementById("userInput");
+        const taskContainer = document.getElementById("taskContainer");
+
+        taskButton.addEventListener("click", function () {
+
+            let inputValue = taskInput.value;
+
+            if (inputValue.trim() === "") {
+                return;
+            }
+
+            const newTask = document.createElement("div");
+            newTask.classList.add("task-card");
+
+            const taskText = document.createElement("span");
+            taskText.innerText = inputValue;
+
+            const removeBtn = document.createElement("button");
+            removeBtn.innerText = "Delete";
+            removeBtn.classList.add("delete-task");
+
+            removeBtn.addEventListener("click", function () {
+                newTask.remove();
+            });
+
+            newTask.appendChild(taskText);
+            newTask.appendChild(removeBtn);
+
+            taskContainer.appendChild(newTask);
+
+            taskInput.value = "";
+
+        });
+
+    </script>
+
+</body>
+
+</html>
+

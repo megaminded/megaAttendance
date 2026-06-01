@@ -15,7 +15,11 @@ $datas = [
         "name" => "Anthony Ruth Chigozie",
         "department" => "Software Engineering",    
     ],
-
+[
+        "matric_no" => "CMP2307620",
+        "name" => "Agwayi Abraham",
+        "department" => "Software Engineering",    
+    ],
     //  add your arrays here
 ];
 

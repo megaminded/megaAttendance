@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scientific Calculator UI</title>
+
+    <style>
+
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body{
+            background: black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .calculator{
+            width: 360px;
+            background: #1e293b;
+            padding: 20px;
+            border-radius: 20px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+        }
+
+        .display{
+            width: 100%;
+            height: 80px;
+            border: none;
+            outline: none;
+            border-radius: 12px;
+            background: #0f172a;
+            color: white;
+            text-align: right;
+            padding: 20px;
+            font-size: 30px;
+            margin-bottom: 20px;
+        }
+
+        .buttons{
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 10px;
+        }
+
+        button{
+            height: 60px;
+            border: none;
+            border-radius: 12px;
+            font-size: 18px;
+            cursor: pointer;
+            transition: 0.2s;
+        }
+
+        button:hover{
+            transform: scale(1.05);
+        }
+
+        .number{
+            background: #385275;
+            color: white;
+        }
+
+        .operator{
+            background: #dda74a;
+            color: white;
+        }
+
+        .function{
+            background: #475569;
+            color: #fff;
+            font-size: 16px;
+        }
+
+        .equal{
+            background: #10b981;
+            color: white;
+        }
+
+        .clear{
+            background: #961d1d;
+            color: white;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="calculator">
+
+        <input type="text" class="display" placeholder="0">
+
+        <div class="buttons">
+
+            <!-- Row 1 -->
+            <button class="function">sin</button>
+            <button class="function">cos</button>
+            <button class="function">tan</button>
+            <button class="function">log</button>
+            <button class="clear">C</button>
+
+            <!-- Row 2 -->
+            <button class="function">√</button>
+            <button class="function">x²</button>
+            <button class="function">π</button>
+            <button class="function">( )</button>
+            <button class="operator">÷</button>
+
+            <!-- Row 3 -->
+            <button class="number">7</button>
+            <button class="number">8</button>
+            <button class="number">9</button>
+            <button class="operator">×</button>
+            <button class="operator">%</button>
+
+            <!-- Row 4 -->
+            <button class="number">4</button>
+            <button class="number">5</button>
+            <button class="number">6</button>
+            <button class="operator">-</button>
+            <button class="function">xʸ</button>
+
+            <!-- Row 5 -->
+            <button class="number">1</button>
+            <button class="number">2</button>
+            <button class="number">3</button>
+            <button class="operator">+</button>
+            <button class="function">ln</button>
+
+            <!-- Row 6 -->
+            <button class="number">0</button>
+            <button class="number">.</button>
+            <button class="function">EXP</button>
+            <button class="equal">=</button>
+            <button class="function">!</button>
+
+        </div>
+
+    </div>
+
+</body>
+</html>

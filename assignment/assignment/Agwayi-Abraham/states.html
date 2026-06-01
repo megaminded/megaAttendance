@@ -1,0 +1,284 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <body id="print">
+    <script>
+      // Array of objects containing the 36 states in Nigeria
+      const print = document.getElementById("print");
+
+      const nigeriaStates = [
+        {
+          name: "Abia",
+          capital: "Umuahia",
+          geopoliticalZone: "South East",
+          population: "3.7 Million",
+          mineralResources: ["Limestone", "Lead", "Zinc", "Oil"],
+        },
+        {
+          name: "Adamawa",
+          capital: "Yola",
+          geopoliticalZone: "North East",
+          population: "4.2 Million",
+          mineralResources: ["Bentonite", "Gypsum", "Kaolin"],
+        },
+        {
+          name: "Akwa Ibom",
+          capital: "Uyo",
+          geopoliticalZone: "South South",
+          population: "5.5 Million",
+          mineralResources: ["Crude Oil", "Natural Gas", "Clay"],
+        },
+        {
+          name: "Anambra",
+          capital: "Awka",
+          geopoliticalZone: "South East",
+          population: "5.9 Million",
+          mineralResources: ["Clay", "Glass Sand", "Lignite"],
+        },
+        {
+          name: "Bauchi",
+          capital: "Bauchi",
+          geopoliticalZone: "North East",
+          population: "7 Million",
+          mineralResources: ["Tin", "Columbite", "Limestone"],
+        },
+        {
+          name: "Bayelsa",
+          capital: "Yenagoa",
+          geopoliticalZone: "South South",
+          population: "2.5 Million",
+          mineralResources: ["Crude Oil", "Natural Gas"],
+        },
+        {
+          name: "Benue",
+          capital: "Makurdi",
+          geopoliticalZone: "North Central",
+          population: "6 Million",
+          mineralResources: ["Limestone", "Gypsum", "Coal"],
+        },
+        {
+          name: "Borno",
+          capital: "Maiduguri",
+          geopoliticalZone: "North East",
+          population: "5.8 Million",
+          mineralResources: ["Clay", "Salt", "Limestone"],
+        },
+        {
+          name: "Cross River",
+          capital: "Calabar",
+          geopoliticalZone: "South South",
+          population: "4 Million",
+          mineralResources: ["Limestone", "Tin", "Kaolin"],
+        },
+        {
+          name: "Delta",
+          capital: "Asaba",
+          geopoliticalZone: "South South",
+          population: "5.6 Million",
+          mineralResources: ["Crude Oil", "Natural Gas", "Glass Sand"],
+        },
+        {
+          name: "Ebonyi",
+          capital: "Abakaliki",
+          geopoliticalZone: "South East",
+          population: "3 Million",
+          mineralResources: ["Lead", "Salt", "Limestone"],
+        },
+        {
+          name: "Edo",
+          capital: "Benin City",
+          geopoliticalZone: "South South",
+          population: "4.7 Million",
+          mineralResources: ["Limestone", "Marble", "Clay"],
+        },
+        {
+          name: "Ekiti",
+          capital: "Ado Ekiti",
+          geopoliticalZone: "South West",
+          population: "3 Million",
+          mineralResources: ["Granite", "Kaolin", "Feldspar"],
+        },
+        {
+          name: "Enugu",
+          capital: "Enugu",
+          geopoliticalZone: "South East",
+          population: "4.4 Million",
+          mineralResources: ["Coal", "Limestone", "Clay"],
+        },
+        {
+          name: "Gombe",
+          capital: "Gombe",
+          geopoliticalZone: "North East",
+          population: "3.7 Million",
+          mineralResources: ["Gypsum", "Limestone", "Coal"],
+        },
+        {
+          name: "Imo",
+          capital: "Owerri",
+          geopoliticalZone: "South East",
+          population: "5.4 Million",
+          mineralResources: ["Lead", "Zinc", "Natural Gas"],
+        },
+        {
+          name: "Jigawa",
+          capital: "Dutse",
+          geopoliticalZone: "North West",
+          population: "6 Million",
+          mineralResources: ["Kaolin", "Granite", "Laterite"],
+        },
+        {
+          name: "Kaduna",
+          capital: "Kaduna",
+          geopoliticalZone: "North West",
+          population: "8.3 Million",
+          mineralResources: ["Gold", "Clay", "Marble"],
+        },
+        {
+          name: "Kano",
+          capital: "Kano",
+          geopoliticalZone: "North West",
+          population: "15 Million",
+          mineralResources: ["Tin", "Kaolin", "Gypsum"],
+        },
+        {
+          name: "Katsina",
+          capital: "Katsina",
+          geopoliticalZone: "North West",
+          population: "9 Million",
+          mineralResources: ["Kaolin", "Marble", "Salt"],
+        },
+        {
+          name: "Kebbi",
+          capital: "Birnin Kebbi",
+          geopoliticalZone: "North West",
+          population: "5 Million",
+          mineralResources: ["Gold", "Limestone", "Clay"],
+        },
+        {
+          name: "Kogi",
+          capital: "Lokoja",
+          geopoliticalZone: "North Central",
+          population: "4.5 Million",
+          mineralResources: ["Iron Ore", "Coal", "Limestone"],
+        },
+        {
+          name: "Kwara",
+          capital: "Ilorin",
+          geopoliticalZone: "North Central",
+          population: "3.6 Million",
+          mineralResources: ["Gold", "Marble", "Granite"],
+        },
+        {
+          name: "Lagos",
+          capital: "Ikeja",
+          geopoliticalZone: "South West",
+          population: "20 Million",
+          mineralResources: ["Bitumen", "Clay", "Glass Sand"],
+        },
+        {
+          name: "Nasarawa",
+          capital: "Lafia",
+          geopoliticalZone: "North Central",
+          population: "3 Million",
+          mineralResources: ["Tin", "Columbite", "Barite"],
+        },
+        {
+          name: "Niger",
+          capital: "Minna",
+          geopoliticalZone: "North Central",
+          population: "6 Million",
+          mineralResources: ["Gold", "Talc", "Granite"],
+        },
+        {
+          name: "Ogun",
+          capital: "Abeokuta",
+          geopoliticalZone: "South West",
+          population: "5 Million",
+          mineralResources: ["Limestone", "Granite", "Clay"],
+        },
+        {
+          name: "Ondo",
+          capital: "Akure",
+          geopoliticalZone: "South West",
+          population: "5 Million",
+          mineralResources: ["Bitumen", "Coal", "Glass Sand"],
+        },
+        {
+          name: "Osun",
+          capital: "Osogbo",
+          geopoliticalZone: "South West",
+          population: "4.7 Million",
+          mineralResources: ["Gold", "Talc", "Granite"],
+        },
+        {
+          name: "Oyo",
+          capital: "Ibadan",
+          geopoliticalZone: "South West",
+          population: "8 Million",
+          mineralResources: ["Marble", "Clay", "Granite"],
+        },
+        {
+          name: "Plateau",
+          capital: "Jos",
+          geopoliticalZone: "North Central",
+          population: "4 Million",
+          mineralResources: ["Tin", "Columbite", "Lead"],
+        },
+        {
+          name: "Rivers",
+          capital: "Port Harcourt",
+          geopoliticalZone: "South South",
+          population: "7 Million",
+          mineralResources: ["Crude Oil", "Natural Gas", "Silica Sand"],
+        },
+        {
+          name: "Sokoto",
+          capital: "Sokoto",
+          geopoliticalZone: "North West",
+          population: "5 Million",
+          mineralResources: ["Limestone", "Clay", "Phosphate"],
+        },
+        {
+          name: "Taraba",
+          capital: "Jalingo",
+          geopoliticalZone: "North East",
+          population: "3.5 Million",
+          mineralResources: ["Barite", "Lead", "Zinc"],
+        },
+        {
+          name: "Yobe",
+          capital: "Damaturu",
+          geopoliticalZone: "North East",
+          population: "3.4 Million",
+          mineralResources: ["Gypsum", "Kaolin", "Quartz"],
+        },
+        {
+          name: "Zamfara",
+          capital: "Gusau",
+          geopoliticalZone: "North West",
+          population: "4.7 Million",
+          mineralResources: ["Gold", "Granite", "Iron Ore"],
+        },
+      ];
+
+      print.innerHTML = nigeriaStates
+        .map(
+          (state) => `
+            <div>
+                <h2>${state.name}</h2>
+                <p><strong>Capital:</strong> ${state.capital}</p>
+                <p><strong>Zone:</strong> ${state.geopoliticalZone}</p>
+                <p><strong>Population:</strong> ${state.population}</p>
+                <p><strong>Resources:</strong> ${state.mineralResources.join(", ")}</p>
+            </div>
+        `,
+        )
+        .join("");
+    </script>
+  </body>
+</html>

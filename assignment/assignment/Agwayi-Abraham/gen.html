@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Genotype Compatibility Calculator</title>
+
+  <style>
+    body{
+      font-family: Arial, sans-serif;
+      background: #f4f4f4;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .container{
+      background: white;
+      padding: 30px;
+      width: 350px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      text-align: center;
+    }
+
+    h1{
+      color: #6a0dad;
+      margin-bottom: 20px;
+    }
+
+    select{
+      width: 100%;
+      padding: 12px;
+      margin: 10px 0;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      font-size: 16px;
+    }
+
+    button{
+      width: 100%;
+      padding: 12px;
+      background: #6a0dad;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-size: 18px;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+
+    button:hover{
+      background: #520a8d;
+    }
+
+    .result{
+      margin-top: 20px;
+      font-size: 18px;
+      font-weight: bold;
+    }
+
+    .good{
+      color: green;
+    }
+
+    .warning{
+      color: orange;
+    }
+
+    .danger{
+      color: red;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>Genotype Calculator</h1>
+
+    <select id="person1">
+      <option value="">Select First Genotype</option>
+      <option>AA</option>
+      <option>AS</option>
+      <option>SS</option>
+      <option>AC</option>
+      <option>SC</option>
+    </select>
+
+    <select id="person2">
+      <option value="">Select Second Genotype</option>
+      <option>AA</option>
+      <option>AS</option>
+      <option>SS</option>
+      <option>AC</option>
+      <option>SC</option>
+    </select>
+
+    <button onclick="checkCompatibility()">
+      Check Compatibility
+    </button>
+
+    <div class="result" id="result"></div>
+  </div>
+
+  <script>
+
+    function checkCompatibility(){
+
+      const genotype1 = document.getElementById("person1").value;
+      const genotype2 = document.getElementById("person2").value;
+      const result = document.getElementById("result");
+
+      if(genotype1 === "" || genotype2 === ""){
+        result.innerHTML = "Please select both genotypes";
+        result.className = "result warning";
+        return;
+      }
+
+      // Safe combinations
+      if(
+        (genotype1 === "AA" && genotype2 === "AA") ||
+        (genotype1 === "AA" && genotype2 === "AS") ||
+        (genotype1 === "AS" && genotype2 === "AA") ||
+        (genotype1 === "AA" && genotype2 === "AC") ||
+        (genotype1 === "AC" && genotype2 === "AA")
+      ){
+        result.innerHTML = "✅ Compatible Match";
+        result.className = "result good";
+      }
+
+      // Risky combinations
+      else if(
+        (genotype1 === "AS" && genotype2 === "AS") ||
+        (genotype1 === "AS" && genotype2 === "AC") ||
+        (genotype1 === "AC" && genotype2 === "AS")
+      ){
+        result.innerHTML = "⚠️ Risky Match - Genetic Counseling Advised";
+        result.className = "result warning";
+      }
+
+      // Dangerous combinations
+      else if(
+        genotype1.includes("S") && genotype2.includes("S")
+      ){
+        result.innerHTML = "❌ High Risk Match";
+        result.className = "result danger";
+      }
+
+      // Default
+      else{
+        result.innerHTML = "⚠️ Consult a Medical Professional";
+        result.className = "result warning";
+      }
+    }
+
+  </script>
+
+</body>
+</html>

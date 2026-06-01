@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nigeria Map Population</title>
+
+<style>
+body{
+    margin:0;
+    background:#f2f2f2;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    min-height:100vh;
+    font-family:Arial;
+}
+
+.map-wrapper{
+    position:relative;
+    width:900px;
+    max-width:95%;
+}
+
+.map-wrapper img{
+    width:100%;
+    display:block;
+    border-radius:10px;
+}
+
+/* STATE LABEL */
+.state{
+    position:absolute;
+    transform:translate(-50%, -50%);
+    text-align:center;
+    font-size:11px;
+    font-weight:bold;
+    background:rgba(255,255,255,0.75);
+    padding:3px 6px;
+    border-radius:6px;
+    white-space:nowrap;
+}
+
+.state span{
+    display:block;
+    font-size:11px;
+    color:green;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="map-wrapper">
+
+    <!-- MAP IMAGE -->
+    <img src="/images/map.jpg" alt="Nigeria Map">
+
+</div>
+
+<script>
+
+// ALL 36 STATES + FCT
+const states = [
+    {name:"Lagos", pop:15.4, x:8, y:78},
+    {name:"Oyo", pop:8.0, x:18, y:65},
+    {name:"Ogun", pop:6.0, x:10, y:70},
+    {name:"Osun", pop:5.5, x:22, y:60},
+    {name:"Ondo", pop:5.3, x:25, y:70},
+    {name:"Ekiti", pop:3.5, x:28, y:62},
+
+    {name:"Kano", pop:16.1, x:55, y:20},
+    {name:"Jigawa", pop:6.8, x:62, y:12},
+    {name:"Yobe", pop:6.5, x:78, y:10},
+    {name:"Borno", pop:7.2, x:88, y:18},
+    {name:"Katsina", pop:9.1, x:50, y:12},
+    {name:"Zamfara", pop:4.5, x:45, y:25},
+    {name:"Sokoto", pop:5.2, x:38, y:10},
+    {name:"Kebbi", pop:5.0, x:35, y:20},
+
+    {name:"Kaduna", pop:9.0, x:55, y:35},
+    {name:"Kogi", pop:4.6, x:45, y:55},
+    {name:"Niger", pop:6.2, x:25, y:40},
+    {name:"Nasarawa", pop:3.2, x:60, y:50},
+    {name:"Plateau", pop:4.0, x:65, y:45},
+    {name:"Benue", pop:8.5, x:65, y:60},
+    {name:"Bauchi", pop:7.8, x:70, y:35},
+    {name:"Gombe", pop:3.6, x:75, y:30},
+    {name:"Adamawa", pop:4.8, x:82, y:40},
+    {name:"Taraba", pop:3.9, x:75, y:55},
+
+    {name:"Enugu", pop:4.5, x:55, y:65},
+    {name:"Anambra", pop:5.5, x:52, y:70},
+    {name:"Imo", pop:5.2, x:52, y:75},
+    {name:"Abia", pop:4.2, x:56, y:78},
+    {name:"Ebonyi", pop:3.2, x:60, y:68},
+
+    {name:"Edo", pop:5.8, x:30, y:75},
+    {name:"Delta", pop:9.1, x:30, y:85},
+    {name:"Rivers", pop:7.2, x:33, y:90},
+    {name:"Bayelsa", pop:2.5, x:30, y:95},
+    {name:"CrossRiver", pop:4.3, x:47, y:83},
+    {name:"Akwa Ibom", pop:5.4, x:65, y:82},
+
+    {name:"FCT Abuja", pop:3.6, x:55, y:45}
+];
+
+const wrapper = document.querySelector(".map-wrapper");
+
+// CREATE STATES ON MAP
+states.forEach((s) => {
+
+    const div = document.createElement("div");
+    div.className = "state";
+    div.style.left = s.x + "%";
+    div.style.top = s.y + "%";
+
+    div.innerHTML = `
+        ${s.name}
+        <span>0.0m</span>
+    `;
+
+    wrapper.appendChild(div);
+
+    animateCounter(div.querySelector("span"), s.pop);
+
+});
+
+// ANIMATION FUNCTION (ALL RUN SIMULTANEOUSLY)
+function animateCounter(el, target){
+
+    let current = 0;
+
+    const speed = target / 200;
+
+    function update(){
+
+        current += speed;
+
+        if(current >= target){
+            current = target;
+        }else{
+            requestAnimationFrame(update);
+        }
+
+        el.textContent = current.toFixed(1) + "m";
+    }
+
+    update();
+}
+
+</script>
+
+</body>
+</html>

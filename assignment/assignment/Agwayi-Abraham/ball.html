@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ball Controller Game</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction:column;
+    background:linear-gradient(135deg,#757d91,#111827,#1e293b);
+    overflow:hidden;
+    font-family:Arial, sans-serif;
+}
+
+/* GAME BOX */
+
+.box{
+    width:500px;
+    height:500px;
+    border:4px solid rgba(255,255,255,0.2);
+    border-radius:25px;
+    position:relative;
+    overflow:hidden;
+    backdrop-filter:blur(10px);
+    background:rgba(255,255,255,0.05);
+    box-shadow:
+        0 0 20px rgba(0,255,255,0.3),
+        inset 0 0 30px rgba(255,255,255,0.05);
+}
+
+/* BALL */
+
+.ball{
+    width:60px;
+    height:60px;
+    border-radius:50%;
+    position:absolute;
+    left:220px;
+    top:220px;
+
+
+    box-shadow:
+        0 0 25px #38bdf8,
+        0 0 50px #2563eb;
+
+    transition:
+        left 0.1s linear,
+        top 0.1s linear,
+        transform 0.1s linear;
+
+    animation: glow 2s infinite alternate;
+}
+
+
+/* CONTROLLER */
+
+.controller{
+    margin-top:30px;
+    display:grid;
+    grid-template-columns:80px 80px 80px;
+    gap:15px;
+}
+
+button{
+    height:70px;
+    border:none;
+    border-radius:20px;
+    font-size:28px;
+    cursor:pointer;
+    color:white;
+
+    background:rgba(255,255,255,0.1);
+
+    backdrop-filter:blur(5px);
+
+    box-shadow:
+        0 5px 15px rgba(0,0,0,0.3),
+        inset 0 0 10px rgba(255,255,255,0.1);
+
+    transition:0.2s;
+}
+
+button:hover{
+    transform:scale(1.1);
+    background:#38bdf8;
+}
+
+.empty{
+    visibility:hidden;
+}
+
+.title{
+    color:white;
+    margin-bottom:20px;
+    font-size:32px;
+    letter-spacing:2px;
+    text-shadow:0 0 10px cyan;
+}
+
+</style>
+</head>
+<body>
+
+<h1 class="title">BALL CONTROLLER</h1>
+
+<div class="box">
+
+    <div class="ball" id="ball"></div>
+
+</div>
+
+<div class="controller">
+
+    <div class="empty"></div>
+    <button onclick="moveUp()">⬆</button>
+    <div class="empty"></div>
+
+    <button onclick="moveLeft()">⬅</button>
+    <button onclick="centerBall()">⦿</button>
+    <button onclick="moveRight()">➡</button>
+
+    <div class="empty"></div>
+    <button onclick="moveDown()">⬇</button>
+    <div class="empty"></div>
+
+</div>
+
+<script>
+
+const ball = document.getElementById("ball");
+
+let x = 220;
+let y = 220;
+
+const speed = 25;
+
+function updateBall(){
+
+    ball.style.left = x + "px";
+    ball.style.top = y + "px";
+
+}
+
+/* MOVE FUNCTIONS */
+
+function moveUp(){
+
+    if(y > 0){
+        y -= speed;
+        ball.style.transform = "scale(1.1)";
+        updateBall();
+    }
+
+}
+
+function moveDown(){
+
+    if(y < 440){
+        y += speed;
+        ball.style.transform = "scale(1.1)";
+        updateBall();
+    }
+
+}
+
+function moveLeft(){
+
+    if(x > 0){
+        x -= speed;
+        ball.style.transform = "scale(1.1)";
+        updateBall();
+    }
+
+}
+
+function moveRight(){
+
+    if(x < 440){
+        x += speed;
+        ball.style.transform = "scale(1.1)";
+        updateBall();
+    }
+
+}
+
+/* RESET TO CENTER */
+
+function centerBall(){
+
+    x = 220;
+    y = 220;
+
+    ball.style.transform = "scale(1.3) rotate(360deg)";
+
+    updateBall();
+
+}
+
+/* KEYBOARD CONTROL */
+
+document.addEventListener("keydown", (e)=>{
+
+    if(e.key === "ArrowUp"){
+        moveUp();
+    }
+
+    if(e.key === "ArrowDown"){
+        moveDown();
+    }
+
+    if(e.key === "ArrowLeft"){
+        moveLeft();
+    }
+
+    if(e.key === "ArrowRight"){
+        moveRight();
+    }
+
+});
+
+</script>
+
+</body>
+</html>
